@@ -15,6 +15,7 @@ func main() {
 					1纳秒=0.000000001秒=10^(-9)秒`)
 	}
 	fmt.Println("1", float64((time.Now().UnixNano()-t1))/float64(int64(time.Second)), "秒\n")
+	fmt.Println("now len:",len(s))
 	one(s)
 	two(s)
 	fmt.Println("len 在 1000000 以内，_,o:=range 比i,_:=range 好")
@@ -24,6 +25,7 @@ func main() {
 					1纳秒=0.000000001秒=10^(-9)秒`)
 	}
 	fmt.Println("1", float64((time.Now().UnixNano()-t1))/float64(int64(time.Second)), "秒\n")
+	fmt.Println("now len:",len(s))
 	one(s)
 	two(s)
 }
