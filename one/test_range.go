@@ -6,6 +6,7 @@ import (
 )
 
 func main() {
+	t0 := time.Now()
 	t1 := time.Now().UnixNano()
 	l := 1000000
 	s := []string{}
@@ -15,7 +16,7 @@ func main() {
 					1纳秒=0.000000001秒=10^(-9)秒`)
 	}
 	fmt.Println("1", float64((time.Now().UnixNano()-t1))/float64(int64(time.Second)), "秒\n")
-	fmt.Println("now length:",len(s))
+	fmt.Println("now length:", len(s))
 	one(s)
 	two(s)
 	fmt.Println("length 在 1000000 以下，_,o:=range 比i,_:=range 好")
@@ -24,8 +25,9 @@ func main() {
 					纳秒也是计算机中的一个专业术语，是用来计算CPU及各个硬件所运行的速度的运行单位。
 					1纳秒=0.000000001秒=10^(-9)秒`)
 	}
+	fmt.Println("毫秒表示:", time.Now().Sub(t0))
 	fmt.Println("1", float64((time.Now().UnixNano()-t1))/float64(int64(time.Second)), "秒\n")
-	fmt.Println("now length:",len(s))
+	fmt.Println("now length:", len(s))
 	one(s)
 	two(s)
 }
